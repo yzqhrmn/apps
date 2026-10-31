@@ -137,6 +137,8 @@ a.dl.mine span, a.dl.mine small { color: inherit; opacity: .88; }
   border-radius: 18px;
 }
 
+.gallery img.wide { width: min(750px, calc(100vw - 56px)); height: auto; }
+
 .about { margin: 36px 0 0; font-size: 19px; max-width: 36em; }
 .detail section:not(.hero, .downloads) { margin-top: 48px; }
 .detail h2 { font-size: 28px; margin-bottom: 16px; }

@@ -3,7 +3,8 @@
 Live at https://yzqhrmn.dev/. Every push to `main` rebuilds the site.
 
 Each app is a folder in `apps/` holding `app.json`, an `icon.png` or `icon.svg`, and
-optional screenshots as `shots/*.jpg`, shown in filename order.
+optional screenshots as `shots/*.jpg`, shown in filename order. Names starting with
+`mac` are laid out as landscape.
 Installers live on GitHub Releases, so the repository stays small.
 
 ## Add an app

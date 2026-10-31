@@ -145,7 +145,9 @@ def download(platform):
 def gallery(app):
     shots = sorted(p.name for p in (APPS / app["slug"] / "shots").glob("*.jpg"))
     images = "".join(
-        f'<li><img src="shots/{esc(name)}" alt="{esc(app["name"])} screenshot {number}" width="540" height="1200" loading="lazy"></li>'
+        f'<li><img src="shots/{esc(name)}" alt="{esc(app["name"])} screenshot {number}" '
+        + ('class="wide" width="1400" height="896"' if name.startswith("mac") else 'width="540" height="1200"')
+        + ' loading="lazy"></li>'
         for number, name in enumerate(shots, 1)
     )
     return f'<ul class="gallery" tabindex="0" aria-label="Screenshots">{images}</ul>' if shots else ""
