@@ -1,5 +1,6 @@
 {
   "name": "Screen Swap for Dual Screen Handhelds",
+  "order": 5,
   "tagline": "Hold Back to move an app to the other screen.",
   "description": "Screen Swap is for Android handhelds with two screens. Hold the Back button for about half a second and the current app jumps to the other display. A short press still works as a normal Back.",
   "version": "1.0",

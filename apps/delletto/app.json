@@ -1,5 +1,6 @@
 {
   "name": "Delletto",
+  "order": 2,
   "tagline": "Swipe through your photos and decide what stays.",
   "description": "Delletto turns clearing out your camera roll into a quick swipe deck. Each photo gets one decision: keep it, favorite it, think it over or delete it. Nothing is gone for good until you confirm.",
   "version": "1.0",
