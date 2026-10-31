@@ -31,3 +31,18 @@ buttons.forEach((button) => {
     empty.hidden = shown > 0;
   });
 });
+
+// Screenshot collage: a thumbnail becomes the large picture.
+const stageImage = document.querySelector(".stage img");
+const thumbs = document.querySelectorAll(".thumbs a");
+
+thumbs.forEach((thumb) => {
+  thumb.addEventListener("click", (event) => {
+    event.preventDefault();
+    stageImage.src = thumb.getAttribute("href");
+    stageImage.width = thumb.dataset.width;
+    stageImage.height = thumb.dataset.height;
+    thumbs.forEach((t) => t.removeAttribute("aria-current"));
+    thumb.setAttribute("aria-current", "true");
+  });
+});

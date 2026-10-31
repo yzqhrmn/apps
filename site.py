@@ -56,6 +56,11 @@ def format_date(iso):
     return f"{date.strftime('%B')} {date.day}, {date.year}"
 
 
+def versioned(name):
+    """Asset path with a content hash, so a new design is never mixed with a cached old file."""
+    return f"assets/{name}?v={hashlib.sha256((ROOT / 'assets' / name).read_bytes()).hexdigest()[:8]}"
+
+
 def page(title, description, body, base="", image=None, url=SITE_URL):
     og_image = f'<meta property="og:image" content="{esc(image)}">' if image else ""
     return f"""<!doctype html>
@@ -75,8 +80,8 @@ def page(title, description, body, base="", image=None, url=SITE_URL):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="{FONTS}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{base}assets/style.css">
-<script src="{base}assets/site.js" defer></script>
+<link rel="stylesheet" href="{base}{versioned('style.css')}">
+<script src="{base}{versioned('site.js')}" defer></script>
 </head>
 <body>
 <header class="top"><a class="brand" href="{base or './'}">{esc(SITE_NAME)}</a></header>
@@ -144,13 +149,21 @@ def download(platform):
 
 def gallery(app):
     shots = sorted(p.name for p in (APPS / app["slug"] / "shots").glob("*.jpg"))
-    images = "".join(
-        f'<li><img src="shots/{esc(name)}" alt="{esc(app["name"])} screenshot {number}" '
-        + ('width="1400" height="896"' if name.startswith("mac") else 'width="540" height="1200"')
-        + ' loading="lazy"></li>'
-        for number, name in enumerate(shots, 1)
+    if not shots:
+        return ""
+    sizes = [(1400, 896) if name.startswith("mac") else (540, 1200) for name in shots]
+    thumbs = "".join(
+        f'<li><a href="shots/{esc(name)}"{" aria-current=true" if number == 1 else ""} '
+        f'aria-label="Show screenshot {number}" data-width="{width}" data-height="{height}">'
+        f'<img src="shots/{esc(name)}" alt="" width="{width}" height="{height}"></a></li>'
+        for number, (name, (width, height)) in enumerate(zip(shots, sizes), 1)
     )
-    return f'<ul class="gallery" tabindex="0" aria-label="Screenshots">{images}</ul>' if shots else ""
+    collage = f'<ul class="thumbs">{thumbs}</ul>' if len(shots) > 1 else ""
+    single = "" if collage else " single"
+    return f"""<section class="gallery{single}" aria-label="Screenshots">
+    <div class="stage"><img src="shots/{esc(shots[0])}" alt="{esc(app['name'])} screenshot" width="{sizes[0][0]}" height="{sizes[0][1]}"></div>
+    {collage}
+  </section>"""
 
 
 def app_page(app):
