@@ -4,21 +4,43 @@
   "tagline": "A private, offline vault for the people in your life.",
   "description": "Memories keeps a profile for each person you care about, with their photos, videos, favorites, socials and your story together. Everything is encrypted on your phone. There is no account and no cloud.",
   "version": "1.16.1",
-  "updated": "2026-10-30",
+  "updated": "2026-10-31",
   "accent": "#0f9d6b",
   "platforms": [
     {
       "id": "android",
-      "requires": "Android 9 or later"
+      "requires": "Android 9 or later",
+      "url": "https://github.com/yzqhrmn/apps/releases/download/memories-v1.16.1/Memories-1.16.1-android.apk",
+      "file": "Memories-1.16.1-android.apk",
+      "size": 38990369,
+      "sha256": "706ba8891b001ad9532a621d4624d4cd4126670bc1226a91bd5e9987cf43ed59"
     }
   ],
   "features": [
-    { "title": "Profiles", "text": "Name, birthday, city, contact details, when you met and notes, with tabs for Info, Favorites, Socials and Story." },
-    { "title": "Encrypted photos and videos", "text": "Media is stored encrypted and never appears in your Gallery." },
-    { "title": "Birthday reminders", "text": "Optional reminders, plus upcoming birthdays above your list." },
-    { "title": "Locks itself", "text": "PIN or fingerprint to open, with auto-lock when you leave the app or turn off the screen." },
-    { "title": "Encrypted backup", "text": "Export one password-protected file and restore it on a new phone." },
-    { "title": "Favorites and socials", "text": "Hobbies, food, movies, music and books, plus links to popular social platforms." }
+    {
+      "title": "Profiles",
+      "text": "Name, birthday, city, contact details, when you met and notes, with tabs for Info, Favorites, Socials and Story."
+    },
+    {
+      "title": "Encrypted photos and videos",
+      "text": "Media is stored encrypted and never appears in your Gallery."
+    },
+    {
+      "title": "Birthday reminders",
+      "text": "Optional reminders, plus upcoming birthdays above your list."
+    },
+    {
+      "title": "Locks itself",
+      "text": "PIN or fingerprint to open, with auto-lock when you leave the app or turn off the screen."
+    },
+    {
+      "title": "Encrypted backup",
+      "text": "Export one password-protected file and restore it on a new phone."
+    },
+    {
+      "title": "Favorites and socials",
+      "text": "Hobbies, food, movies, music and books, plus links to popular social platforms."
+    }
   ],
   "setup": [
     "Download the file on your phone and open it.",

@@ -8,7 +8,11 @@
   "platforms": [
     {
       "id": "android",
-      "requires": "Android 13 or later"
+      "requires": "Android 13 or later",
+      "url": "https://github.com/yzqhrmn/apps/releases/download/screen-swap-v1.0/ScreenSwap-1.0-android.apk",
+      "file": "ScreenSwap-1.0-android.apk",
+      "size": 41451,
+      "sha256": "c082c7c01a5cfd2a7743fbe20d9b16ba8c4de81f3c9a7b4a08e5f28ee2cb4b4f"
     }
   ],
   "features": [

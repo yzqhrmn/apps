@@ -8,7 +8,11 @@
   "platforms": [
     {
       "id": "android",
-      "requires": "Android 11 or later"
+      "requires": "Android 11 or later",
+      "url": "https://github.com/yzqhrmn/apps/releases/download/delletto-v1.0/Delletto-1.0-android.apk",
+      "file": "Delletto-1.0-android.apk",
+      "size": 62557530,
+      "sha256": "cc569fef705d2e8cfc23ed9ca9f1b31128944308182bc6c98e8bb4cebc103486"
     },
     {
       "id": "ios",
@@ -17,12 +21,30 @@
     }
   ],
   "features": [
-    { "title": "Swipe left to delete", "text": "The photo moves to Trash and is deleted for good after 30 days, and only after you confirm." },
-    { "title": "Swipe right to keep", "text": "The photo is filed in Saved." },
-    { "title": "Swipe up to favorite", "text": "The photo goes to Favorites." },
-    { "title": "Swipe down if unsure", "text": "It waits in Second Thoughts until you decide." },
-    { "title": "Undo and Cancel All", "text": "Bring back the last photo, or start over with every photo back in the deck." },
-    { "title": "Photo details", "text": "See when and where a photo was taken, plus camera and file details." }
+    {
+      "title": "Swipe left to delete",
+      "text": "The photo moves to Trash and is deleted for good after 30 days, and only after you confirm."
+    },
+    {
+      "title": "Swipe right to keep",
+      "text": "The photo is filed in Saved."
+    },
+    {
+      "title": "Swipe up to favorite",
+      "text": "The photo goes to Favorites."
+    },
+    {
+      "title": "Swipe down if unsure",
+      "text": "It waits in Second Thoughts until you decide."
+    },
+    {
+      "title": "Undo and Cancel All",
+      "text": "Bring back the last photo, or start over with every photo back in the deck."
+    },
+    {
+      "title": "Photo details",
+      "text": "See when and where a photo was taken, plus camera and file details."
+    }
   ],
   "setup": [
     "Download the file on your phone and open it.",
