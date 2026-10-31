@@ -4,7 +4,6 @@
   "description": "Delletto turns clearing out your camera roll into a quick swipe deck. Each photo gets one decision: keep it, favorite it, think it over or delete it. Nothing is gone for good until you confirm.",
   "version": "1.0",
   "updated": "2026-10-31",
-  "accent": "#c92a2a",
   "platforms": [
     {
       "id": "android",
@@ -53,5 +52,9 @@
   ],
   "limits": [
     "This is a test build, so Android will warn that it comes from an unknown source."
-  ]
+  ],
+  "neon": "#ff2a9d",
+  "font": "Rubik Glitch",
+  "name_size": "38px",
+  "title_size": "clamp(40px,9vw,72px)"
 }

@@ -5,7 +5,6 @@
   "description": "Memories keeps a profile for each person you care about, with their photos, videos, favorites, socials and your story together. Everything is encrypted on your phone. There is no account and no cloud.",
   "version": "1.16.1",
   "updated": "2026-10-31",
-  "accent": "#0f9d6b",
   "platforms": [
     {
       "id": "android",
@@ -50,5 +49,9 @@
   "limits": [
     "Keep your backup password safe. Your data stays on the phone, so there is nothing to recover from online.",
     "Android will warn that the app comes from an unknown source."
-  ]
+  ],
+  "neon": "#19f0ff",
+  "font": "Monoton",
+  "name_size": "34px",
+  "title_size": "clamp(36px,8vw,64px)"
 }

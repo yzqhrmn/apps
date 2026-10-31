@@ -4,7 +4,6 @@
   "description": "Screen Swap is for Android handhelds with two screens. Hold the Back button for about half a second and the current app jumps to the other display. A short press still works as a normal Back.",
   "version": "1.0",
   "updated": "2026-10-31",
-  "accent": "#0b7285",
   "platforms": [
     {
       "id": "android",
@@ -39,5 +38,9 @@
     "Shizuku has to be running for the swap to work.",
     "This is a test build, so Android will warn that it comes from an unknown source."
   ],
-  "file_label": "ScreenSwap"
+  "file_label": "ScreenSwap",
+  "neon": "#00ff9f",
+  "font": "Sixtyfour",
+  "name_size": "15px",
+  "title_size": "clamp(22px,4.4vw,38px)"
 }

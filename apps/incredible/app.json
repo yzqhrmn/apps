@@ -4,7 +4,6 @@
   "description": "Incredible connects an Android phone to a Mac over your local network. Traffic is encrypted end to end with a key shared once by QR code. There is no account, cloud service or server.",
   "version": "1.0",
   "updated": "2026-10-31",
-  "accent": "#4c3fe0",
   "platforms": [
     {
       "id": "android",
@@ -72,5 +71,9 @@
     "It works on a local network or within Bluetooth range, not between networks.",
     "SMS only. RCS chats appear as notifications instead.",
     "One phone per Mac."
-  ]
+  ],
+  "neon": "#fcee0a",
+  "font": "Faster One",
+  "name_size": "32px",
+  "title_size": "clamp(36px,9vw,70px)"
 }

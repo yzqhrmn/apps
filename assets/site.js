@@ -14,24 +14,6 @@ if (mine) {
   mine.parentElement.prepend(mine);
 }
 
-// Platform filter on the home page.
-const buttons = document.querySelectorAll("[data-filter]");
-const rows = document.querySelectorAll(".app");
-const empty = document.querySelector(".empty");
-
-buttons.forEach((button) => {
-  button.addEventListener("click", () => {
-    const filter = button.dataset.filter;
-    buttons.forEach((b) => b.setAttribute("aria-pressed", String(b === button)));
-    let shown = 0;
-    rows.forEach((row) => {
-      row.hidden = filter !== "all" && !row.dataset.platforms.split(" ").includes(filter);
-      if (!row.hidden) shown += 1;
-    });
-    empty.hidden = shown > 0;
-  });
-});
-
 // Screenshot collage: a thumbnail becomes the large picture.
 const stageImage = document.querySelector(".stage img");
 const thumbs = document.querySelectorAll(".thumbs a");

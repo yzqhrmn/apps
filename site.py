@@ -24,12 +24,8 @@ APPS = ROOT / "apps"
 OUT = ROOT / "_site"
 REPO = "yzqhrmn/apps"
 SITE_URL = "https://yzqhrmn.dev/"
-SITE_NAME = "Ayaz Apps"
-SITE_LINE = "Small tools for phones and Macs. Download one and try it."
-FONTS = (
-    "https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:"
-    "opsz,wght@12..96,500;12..96,700&display=swap"
-)
+SITE_NAME = "yzqhrmn"
+SITE_LINE = "Apps we made"
 PLATFORM_LABELS = {"android": "Android", "ios": "iPhone", "mac": "Mac", "windows": "Windows", "web": "Web"}
 esc = html.escape
 
@@ -61,6 +57,12 @@ def versioned(name):
     return f"assets/{name}?v={hashlib.sha256((ROOT / 'assets' / name).read_bytes()).hexdigest()[:8]}"
 
 
+def font_url():
+    families = ["Tilt Neon", "Share Tech Mono"] + sorted(a["font"] for a in load_apps())
+    query = "&".join("family=" + family.replace(" ", "+") for family in families)
+    return f"https://fonts.googleapis.com/css2?{query}&display=swap"
+
+
 def page(title, description, body, base="", image=None, url=SITE_URL):
     og_image = f'<meta property="og:image" content="{esc(image)}">' if image else ""
     return f"""<!doctype html>
@@ -74,17 +76,16 @@ def page(title, description, body, base="", image=None, url=SITE_URL):
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{esc(url)}">
 {og_image}
-<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#14161b" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#07060f">
 <link rel="icon" href="{base}assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="{FONTS}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{esc(font_url())}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{base}{versioned('style.css')}">
 <script src="{base}{versioned('site.js')}" defer></script>
 </head>
 <body>
-<header class="top"><a class="brand" href="{base or './'}">{esc(SITE_NAME)}</a></header>
+{'<header class="top"><a class="brand" href="' + base + '">' + esc(SITE_NAME) + '</a></header>' if base else ''}
 {body}
 <footer class="foot">
   <p>Built by Ayaz with Claude.</p>
@@ -95,41 +96,44 @@ def page(title, description, body, base="", image=None, url=SITE_URL):
 """
 
 
-def tags(app):
-    return "".join(f'<li>{esc(PLATFORM_LABELS[p["id"]])}</li>' for p in app["platforms"])
+def shot_names(app):
+    return sorted(p.name for p in (APPS / app["slug"] / "shots").glob("*.jpg"))
+
+
+def shot_size(name):
+    return (1400, 896) if name.startswith("mac") else (540, 1200)
+
+
+def lane(app, number):
+    names = shot_names(app)
+    # Short sets repeat so the reel always fills its lane, then the doubled half makes the loop seamless.
+    reel = (names * 6)[:max(len(names), 6)]
+    images = "".join(
+        f'<img src="{esc(app["slug"])}/shots/{esc(name)}" alt="" width="{shot_size(name)[0]}" height="{shot_size(name)[1]}">'
+        for name in reel * 2
+    )
+    style = (
+        f"--neon:{esc(app['neon'])};--app-font:'{esc(app['font'])}';--name-size:{esc(app['name_size'])};"
+        f"--name-size-phone:{esc(app.get('name_size_phone', app['name_size']))};--speed:{96 + number * 12}s"
+    )
+    return f"""
+    <li class="lane" style="{style}">
+      <a href="{esc(app['slug'])}/" aria-label="Open {esc(app['name'])}: {esc(app['tagline'])}">
+        <h2 class="lane-name">{esc(app['name'])}</h2>
+        <div class="reel{' down' if number % 2 else ''}"><div class="track">{images}</div></div>
+      </a>
+    </li>"""
 
 
 def home(apps):
-    used = [key for key in PLATFORM_LABELS if any(p["id"] == key for a in apps for p in a["platforms"])]
-    filters = "".join(
-        f'<button type="button" data-filter="{key}" aria-pressed="false">{esc(PLATFORM_LABELS[key])}</button>'
-        for key in used
-    )
-    rows = "".join(f"""
-    <li class="app" data-platforms="{' '.join(p['id'] for p in a['platforms'])}" style="--accent:{esc(a['accent'])}">
-      <a href="{esc(a['slug'])}/">
-        <img src="{esc(a['slug'])}/{esc(a['icon'])}" alt="" width="96" height="96">
-        <span class="app-text">
-          <span class="app-name">{esc(a['name'])}</span>
-          <span class="app-line">{esc(a['tagline'])}</span>
-          <ul class="tags">{tags(a)}</ul>
-        </span>
-        <span class="go" aria-hidden="true">→</span>
-      </a>
-    </li>""" for a in apps)
+    lanes = "".join(lane(app, number) for number, app in enumerate(apps))
     body = f"""<main>
-  <section class="intro">
-    <h1>Apps we made.</h1>
-    <p>{esc(SITE_LINE)}</p>
-  </section>
-  <div class="filters" role="group" aria-label="Filter by platform">
-    <button type="button" data-filter="all" aria-pressed="true">All</button>{filters}
-  </div>
-  <ul class="apps">{rows}
+  <h1 class="sign" aria-label="yzqhrmn"><span aria-hidden="true"><span class="bad">y</span><span class="bad z">z</span>qhrmn</span></h1>
+  <p class="tagline">{esc(SITE_LINE)}</p>
+  <ul class="wall">{lanes}
   </ul>
-  <p class="empty" hidden>Nothing for this platform yet.</p>
 </main>"""
-    return page(SITE_NAME, SITE_LINE, body)
+    return page(f"{SITE_NAME} apps", SITE_LINE, body)
 
 
 def download(platform):
@@ -148,10 +152,10 @@ def download(platform):
 
 
 def gallery(app):
-    shots = sorted(p.name for p in (APPS / app["slug"] / "shots").glob("*.jpg"))
+    shots = shot_names(app)
     if not shots:
         return ""
-    sizes = [(1400, 896) if name.startswith("mac") else (540, 1200) for name in shots]
+    sizes = [shot_size(name) for name in shots]
     thumbs = "".join(
         f'<li><a href="shots/{esc(name)}"{" aria-current=true" if number == 1 else ""} '
         f'aria-label="Show screenshot {number}" data-width="{width}" data-height="{height}">'
@@ -180,7 +184,7 @@ def app_page(app):
         for p in app["platforms"] if p.get("sha256")
     )
     checksums = f"<details class='sums'><summary>File checksums (SHA-256)</summary><dl>{hashes}</dl></details>" if hashes else ""
-    body = f"""<main class="detail" style="--accent:{esc(app['accent'])}">
+    body = f"""<main class="detail" style="--accent:{esc(app['neon'])};--app-font:'{esc(app['font'])}';--title-size:{esc(app['title_size'])}">
   <a class="back" href="../">← All apps</a>
   <section class="hero">
     <img src="{esc(app['icon'])}" alt="" width="144" height="144">
@@ -245,7 +249,10 @@ def new(args):
         "description": "A short paragraph for the app's page.",
         "version": "1.0",
         "updated": today,
-        "accent": "#3b5bdb",
+        "neon": "#19f0ff",
+        "font": "Monoton",
+        "name_size": "30px",
+        "title_size": "clamp(34px, 7vw, 60px)",
         "platforms": [{"id": "android", "requires": "Android 11 or later"}],
         "features": [{"title": "Main feature", "text": "What it does for you."}],
         "setup": [],
