@@ -1,0 +1,29 @@
+{
+  "name": "Screen Swap",
+  "tagline": "Hold Back to move an app to your phone's other screen.",
+  "description": "Screen Swap is for Android phones with two screens. Hold the Back button for about half a second and the current app jumps to the other display. A short press still works as a normal Back.",
+  "version": "1.0",
+  "updated": "2026-10-31",
+  "accent": "#0b7285",
+  "platforms": [
+    {
+      "id": "android",
+      "requires": "Android 13 or later"
+    }
+  ],
+  "features": [
+    { "title": "One gesture", "text": "Hold Back to swap the current app to the other screen." },
+    { "title": "Back still works", "text": "A short press passes through as a normal Back." },
+    { "title": "Tiny", "text": "The whole app is about 40 KB." }
+  ],
+  "setup": [
+    "Install and start Shizuku, which gives the app the rights it needs to move other apps.",
+    "Download and open the Screen Swap file on your phone.",
+    "Open Screen Swap and tap Allow Shizuku access.",
+    "Tap Open Accessibility settings and turn on Screen Swap."
+  ],
+  "limits": [
+    "Shizuku has to be running for the swap to work.",
+    "This is a test build, so Android will warn that it comes from an unknown source."
+  ]
+}

@@ -1,0 +1,5 @@
+_site/
+.upload/
+.DS_Store
+__pycache__/
+.claude/
