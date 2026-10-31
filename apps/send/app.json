@@ -1,0 +1,37 @@
+{
+  "name": "Send to Mac/Android",
+  "file_label": "SendToMacAndroid",
+  "tagline": "Move files between your Mac and Android phone.",
+  "description": "Send To Android runs on the Mac and Send to Mac runs on the phone. Drop files on one side and they arrive on the other, over Wi-Fi or a USB cable.",
+  "version": "3.0",
+  "updated": "2026-10-26",
+  "accent": "#1c7ed6",
+  "platforms": [
+    {
+      "id": "mac",
+      "requires": "Apple silicon, macOS 11 or later",
+      "note": "Send To Android. Not notarized, so allow the first launch in System Settings, Privacy & Security."
+    },
+    {
+      "id": "android",
+      "requires": "Android 10 or later",
+      "note": "Send to Mac, version 1.2."
+    }
+  ],
+  "features": [
+    { "title": "Wi-Fi or USB", "text": "Use the same network, or plug in a cable." },
+    { "title": "Pair with a QR code", "text": "Scan the code on your Mac to connect." },
+    { "title": "Works without the phone app", "text": "The phone's browser can open the transfer page instead." },
+    { "title": "Drag and drop", "text": "Drop files on the Mac window, or use Send to Mac from Android's share sheet." }
+  ],
+  "setup": [
+    "Open Send To Android on the Mac.",
+    "Install Send to Mac on the phone, or skip it and use the phone's browser.",
+    "Join the same Wi-Fi, then scan the QR code shown on the Mac.",
+    "Drop files to send. Files from the phone land in Downloads, in the Send To Android folder."
+  ],
+  "limits": [
+    "Over Wi-Fi, files travel on your local network without extra encryption, so use a network you trust.",
+    "USB needs USB debugging and adb on the Mac."
+  ]
+}

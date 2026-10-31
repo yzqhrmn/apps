@@ -41,7 +41,8 @@ def load_apps():
         app["slug"] = path.parent.name
         app["icon"] = next(path.parent.glob("icon.*")).name
         apps.append(app)
-    return sorted(apps, key=lambda a: a.get("updated", ""), reverse=True)
+    apps.sort(key=lambda a: a.get("updated", ""), reverse=True)
+    return sorted(apps, key=lambda a: a.get("order", 99))
 
 
 def format_size(num_bytes):
@@ -239,7 +240,8 @@ def release(args):
     app = json.loads(path.read_text())
     app["version"] = args.version or app["version"]
     tag = f"{args.slug}-v{app['version']}"
-    name = f"{app['name'].replace(' ', '')}-{app['version']}-{args.platform}{source.suffix}"
+    label = re.sub(r"[^A-Za-z0-9]", "", app.get("file_label", app["name"]))
+    name = f"{label}-{app['version']}-{args.platform}{source.suffix}"
     staged = OUT.parent / ".upload" / name
     staged.parent.mkdir(exist_ok=True)
     shutil.copy(source, staged)
