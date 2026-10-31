@@ -1,6 +1,6 @@
 # Ayaz Apps
 
-Live at https://yzqhrmn.github.io/apps/. Every push to `main` rebuilds the site.
+Live at https://yzqhrmn.dev/. Every push to `main` rebuilds the site.
 
 Each app is a folder in `apps/` holding `app.json`, an `icon.png` or `icon.svg`, and
 optional screenshots as `shots/*.jpg`, shown in filename order.
