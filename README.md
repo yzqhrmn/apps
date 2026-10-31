@@ -2,7 +2,8 @@
 
 Live at https://yzqhrmn.github.io/apps/. Every push to `main` rebuilds the site.
 
-Each app is a folder in `apps/` holding `app.json` and an `icon.png` or `icon.svg`.
+Each app is a folder in `apps/` holding `app.json`, an `icon.png` or `icon.svg`, and
+optional screenshots as `shots/*.jpg`, shown in filename order.
 Installers live on GitHub Releases, so the repository stays small.
 
 ## Add an app

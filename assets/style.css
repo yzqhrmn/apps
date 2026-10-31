@@ -117,6 +117,26 @@ a.dl.mine { background: var(--accent); border-color: var(--accent); color: var(-
 a.dl.mine span, a.dl.mine small { color: inherit; opacity: .88; }
 .dl.off.mine::before { color: var(--muted); }
 
+.gallery {
+  list-style: none;
+  display: flex;
+  gap: 14px;
+  margin: 32px -20px 0;
+  padding: 0 20px 12px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scroll-padding: 0 20px;
+  -webkit-overflow-scrolling: touch;
+}
+.gallery li { flex: none; scroll-snap-align: start; }
+.gallery img {
+  display: block;
+  width: auto;
+  height: 480px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
 .about { margin: 36px 0 0; font-size: 19px; max-width: 36em; }
 .detail section:not(.hero, .downloads) { margin-top: 48px; }
 .detail h2 { font-size: 28px; margin-bottom: 16px; }
@@ -157,6 +177,7 @@ a.dl.mine span, a.dl.mine small { color: inherit; opacity: .88; }
   .go { display: none; }
   .hero { align-items: flex-start; flex-direction: column; gap: 16px; padding-top: 8px; }
   .hero img { width: 104px; height: 104px; }
+  .gallery img { height: 400px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

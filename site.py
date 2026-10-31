@@ -142,6 +142,15 @@ def download(platform):
       </a>"""
 
 
+def gallery(app):
+    shots = sorted(p.name for p in (APPS / app["slug"] / "shots").glob("*.jpg"))
+    images = "".join(
+        f'<li><img src="shots/{esc(name)}" alt="{esc(app["name"])} screenshot {number}" width="540" height="1200" loading="lazy"></li>'
+        for number, name in enumerate(shots, 1)
+    )
+    return f'<ul class="gallery" tabindex="0" aria-label="Screenshots">{images}</ul>' if shots else ""
+
+
 def app_page(app):
     features = "".join(
         f'<li><h3>{esc(f["title"])}</h3><p>{esc(f["text"])}</p></li>' for f in app["features"]
@@ -167,6 +176,7 @@ def app_page(app):
     </div>
   </section>
   <section class="downloads" aria-label="Downloads">{''.join(download(p) for p in app['platforms'])}</section>
+  {gallery(app)}
   <p class="about">{esc(app['description'])}</p>
   <section><h2>What it does</h2><ul class="features">{features}</ul></section>
   {''.join(sections)}
@@ -187,6 +197,8 @@ def build(_args=None):
         folder = OUT / app["slug"]
         folder.mkdir()
         shutil.copy(APPS / app["slug"] / app["icon"], folder)
+        if (APPS / app["slug"] / "shots").is_dir():
+            shutil.copytree(APPS / app["slug"] / "shots", folder / "shots")
         (folder / "index.html").write_text(app_page(app))
     missing = page(
         f"Page not found · {SITE_NAME}", "This page does not exist.",
