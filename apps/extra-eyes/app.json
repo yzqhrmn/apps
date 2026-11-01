@@ -1,0 +1,80 @@
+{
+  "name": "Extra Eyes",
+  "order": 6,
+  "file_label": "ExtraEyes",
+  "tagline": "Turn a spare phone into a camera that rings another phone.",
+  "description": "Point one Android phone at a door or room and mark the area you care about. When someone comes in, your other phone rings. Video stays on your own Wi-Fi, encrypted, with no account, cloud or server.",
+  "version": "1.1",
+  "updated": "2026-10-31",
+  "platforms": [
+    {
+      "id": "android",
+      "requires": "Android 8 or later",
+      "note": "Install this on the camera phone and the watcher phone. Photo and Video need Android 10 or later.",
+      "url": "https://github.com/yzqhrmn/apps/releases/download/extra-eyes-v1.1/ExtraEyes-1.1-android.apk",
+      "file": "ExtraEyes-1.1-android.apk",
+      "size": 54828417,
+      "sha256": "40388c339b8ebbdbda9731e41499da093ac6a341e24d5d52404f35a8619fa706"
+    },
+    {
+      "id": "wear",
+      "requires": "Wear OS 3 or later",
+      "note": "Optional. Installing on a watch needs Wireless debugging and adb on a computer.",
+      "url": "https://github.com/yzqhrmn/apps/releases/download/extra-eyes-v1.1/ExtraEyes-1.1-wear.apk",
+      "file": "ExtraEyes-1.1-wear.apk",
+      "size": 57600090,
+      "sha256": "5a3770b2eaafa61998be452d6c51c5e174db00b541a86b3ae44ffa0d6dd1945c"
+    }
+  ],
+  "features": [
+    {
+      "title": "Mark what matters",
+      "text": "Draw an area with up to 12 dots, a line, or watch the whole view, so people passing outside don't ring it."
+    },
+    {
+      "title": "Person detection",
+      "text": "On-device AI rings only for a person in the area. Turn it off to ring on any movement."
+    },
+    {
+      "title": "Alarm sounds",
+      "text": "Thirteen alarm, gentle and funny sounds. It rings once per visit, even on silent."
+    },
+    {
+      "title": "Live video",
+      "text": "Watch from another phone or a watch. Pick the ultrawide, wide or tele lens on the camera."
+    },
+    {
+      "title": "Photo and video",
+      "text": "Save pictures and clips to the gallery, from either phone or from the watch."
+    },
+    {
+      "title": "Battery warnings",
+      "text": "See the camera's battery, with a warning at 30% and again at 20%."
+    },
+    {
+      "title": "Wear OS watch",
+      "text": "Video, alarms and captures on your wrist, with or without a watcher phone."
+    },
+    {
+      "title": "Share the app",
+      "text": "Send the app straight to another phone from the main screen."
+    }
+  ],
+  "setup": [
+    "Install the app on two phones and join the same Wi-Fi.",
+    "On the camera phone, tap Pair phones, then Show code.",
+    "On the watcher phone, tap Pair phones, then Scan code.",
+    "On the camera phone, choose Camera and drag the red dots around the door.",
+    "To add a watch, open Extra Eyes on it, then tap Connect watch on a phone and scan the watch's code."
+  ],
+  "limits": [
+    "Both phones must be on the same Wi-Fi. Guest networks often block them from reaching each other.",
+    "It's an alert for when you step away, not a security system. Nothing is recorded unless you press Photo or Video.",
+    "With the app closed, a watch gets alarms only from the phone it's paired with, within Bluetooth range.",
+    "Android will warn that the app comes from an unknown source."
+  ],
+  "neon": "#ff6a00",
+  "font": "Audiowide",
+  "name_size": "30px",
+  "title_size": "clamp(34px,8vw,62px)"
+}

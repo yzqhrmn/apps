@@ -26,7 +26,7 @@ REPO = "yzqhrmn/apps"
 SITE_URL = "https://yzqhrmn.dev/"
 SITE_NAME = "yzqhrmn"
 SITE_LINE = "Apps we made"
-PLATFORM_LABELS = {"android": "Android", "ios": "iPhone", "mac": "Mac", "windows": "Windows", "web": "Web"}
+PLATFORM_LABELS = {"android": "Android", "ios": "iPhone", "mac": "Mac", "windows": "Windows", "web": "Web", "wear": "Wear OS"}
 esc = html.escape
 
 
