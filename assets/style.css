@@ -88,12 +88,19 @@ h1, h2, h3 { font-weight: 400; line-height: 1.1; margin: 0; }
 .wall {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-auto-flow: column;
+  grid-auto-columns: max(230px, calc((100% - 40px) / 5));
+  grid-template-rows: minmax(0, 1fr);
   gap: 10px;
   height: max(620px, calc(100dvh - 330px));
   margin: 0;
-  padding: 0 10px;
+  padding: 0 10px 10px;
+  overflow-x: auto;
+  overflow-y: hidden;
 }
+.wall::-webkit-scrollbar { height: 10px; }
+.wall::-webkit-scrollbar-track { background: var(--surface); border-radius: 5px; }
+.wall::-webkit-scrollbar-thumb { background: var(--pink); border-radius: 5px; }
 .lane { min-width: 0; min-height: 0; --accent: var(--neon); }
 .lane > a {
   display: flex;
@@ -237,7 +244,7 @@ a.dl.mine span, a.dl.mine small { color: inherit; opacity: .85; }
 @media (max-width: 760px) {
   .sign { padding-top: 14px; }
   .tagline { font-size: 13px; letter-spacing: .24em; }
-  .wall { grid-template-columns: minmax(0, 1fr); height: auto; }
+  .wall { grid-auto-flow: row; grid-auto-columns: auto; grid-template-rows: none; grid-template-columns: minmax(0, 1fr); height: auto; overflow: visible; }
   .lane-name { height: 76px; font-size: var(--name-size-phone, 26px); }
   .reel {
     flex: none;
