@@ -3,16 +3,16 @@
   "order": 2,
   "tagline": "Swipe through your photos and decide what stays.",
   "description": "Delletto turns clearing out your camera roll into a quick swipe deck. Each photo gets one decision: keep it, favorite it, think it over or delete it. Nothing is gone for good until you confirm.",
-  "version": "1.0",
-  "updated": "2026-10-31",
+  "version": "1.1",
+  "updated": "2026-11-02",
   "platforms": [
     {
       "id": "android",
       "requires": "Android 11 or later",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/delletto-v1.0/Delletto-1.0-android.apk",
-      "file": "Delletto-1.0-android.apk",
-      "size": 62557530,
-      "sha256": "cc569fef705d2e8cfc23ed9ca9f1b31128944308182bc6c98e8bb4cebc103486"
+      "url": "https://github.com/yzqhrmn/apps/releases/download/delletto-v1.1/Delletto-1.1-android.apk",
+      "file": "Delletto-1.1-android.apk",
+      "size": 2793471,
+      "sha256": "26012af205db6be6e6c881fdc2e84468782ad85bca4aac563fddb459e9589846"
     },
     {
       "id": "ios",
@@ -36,6 +36,10 @@
     {
       "title": "Swipe down if unsure",
       "text": "It waits in Second Thoughts until you decide."
+    },
+    {
+      "title": "Find duplicates",
+      "text": "Finds exact copies and look-alikes on your phone. Compare two side by side, swipe them, or let the app pick the worse ones for you to check."
     },
     {
       "title": "Undo and Cancel All",
