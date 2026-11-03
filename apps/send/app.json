@@ -4,26 +4,26 @@
   "file_label": "SendToMacAndroid",
   "tagline": "Move files between your Mac and Android phone.",
   "description": "Send To Android runs on the Mac and Send to Mac runs on the phone. Drop files on one side and they arrive on the other, over Wi-Fi or a USB cable.",
-  "version": "3.0",
+  "version": "3.1",
   "updated": "2026-11-03",
   "platforms": [
     {
       "id": "mac",
       "requires": "Apple silicon, macOS 11 or later",
       "note": "Send To Android. Not notarized, so allow the first launch in System Settings, Privacy & Security.",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/send-v3.0/SendToMacAndroid-3.0-mac.zip",
-      "file": "SendToMacAndroid-3.0-mac.zip",
-      "size": 15540547,
-      "sha256": "be88968b86865a74363bda4a2f020d357f150d7e3645db7dd41e2a0a58c7daa9"
+      "url": "https://github.com/yzqhrmn/apps/releases/download/send-v3.1/SendToMacAndroid-3.1-mac.zip",
+      "file": "SendToMacAndroid-3.1-mac.zip",
+      "size": 15541905,
+      "sha256": "1fddac7720cbbdebe0e6a120505854179996f756304f8fdd26474faf99289bf6"
     },
     {
       "id": "android",
       "requires": "Android 10 or later",
-      "note": "Send to Mac, version 3.0.",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/send-v3.0/SendToMacAndroid-3.0-android.apk",
-      "file": "SendToMacAndroid-3.0-android.apk",
+      "note": "Send to Mac, version 3.1.",
+      "url": "https://github.com/yzqhrmn/apps/releases/download/send-v3.1/SendToMacAndroid-3.1-android.apk",
+      "file": "SendToMacAndroid-3.1-android.apk",
       "size": 2628036,
-      "sha256": "4b004386d5370cd782d63564a34d132ffd3555cbbf679a9b838364460d84f2db"
+      "sha256": "9ec32d41131f6d32741746d7674537de12422dff38f7ce231bf53d0ac155e367"
     }
   ],
   "features": [
@@ -34,6 +34,10 @@
     {
       "title": "Several phones",
       "text": "Each phone gets its own tile. Drop files on a tile to send to that phone, and phones can send to each other."
+    },
+    {
+      "title": "Hide phones you don't use",
+      "text": "Remove a phone from the window with its × button, and bring it back in Settings."
     },
     {
       "title": "Pair with a QR code",
