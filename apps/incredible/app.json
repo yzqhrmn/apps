@@ -3,32 +3,36 @@
   "order": 3,
   "tagline": "Your Android phone, linked to your Mac.",
   "description": "Incredible connects an Android phone to a Mac over your local network. Traffic is encrypted end to end with a key shared once by QR code. There is no account, cloud service or server.",
-  "version": "1.1",
+  "version": "1.2",
   "updated": "2026-11-03",
   "platforms": [
     {
       "id": "android",
       "requires": "Android 12 or later",
       "note": "Install this on the phone.",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/incredible-v1.1/Incredible-1.1-android.apk",
-      "file": "Incredible-1.1-android.apk",
-      "size": 2666314,
-      "sha256": "971c02c1fe0372732afe403756ba29f7a6bfcbce908e7470f62606f974c9fe26"
+      "url": "https://github.com/yzqhrmn/apps/releases/download/incredible-v1.2/Incredible-1.2-android.apk",
+      "file": "Incredible-1.2-android.apk",
+      "size": 2682958,
+      "sha256": "edbaa500458e84f69251f6fd3f119fc44063325c23c9e9a9feefa954b5c82d3e"
     },
     {
       "id": "mac",
       "requires": "macOS 14 or later",
       "note": "Not notarized. After the first launch is blocked, allow it in System Settings, Privacy & Security.",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/incredible-v1.1/Incredible-1.1-mac.zip",
-      "file": "Incredible-1.1-mac.zip",
-      "size": 1492013,
-      "sha256": "163cdb403278e1cc5d1483f845a8127ea62530a63ee3e818cbf29ed0f355710c"
+      "url": "https://github.com/yzqhrmn/apps/releases/download/incredible-v1.2/Incredible-1.2-mac.zip",
+      "file": "Incredible-1.2-mac.zip",
+      "size": 1631924,
+      "sha256": "af01035f0805a4925a8a61e8d32f8a8508fe61283765f21f54f542e26c839891"
     }
   ],
   "features": [
     {
       "title": "Notifications",
-      "text": "Banners on the Mac, with dismiss synced both ways, action buttons, inline reply, a searchable history and apps you can exclude."
+      "text": "Banners on the Mac, with dismiss synced both ways, action buttons, inline reply and a searchable history. Mute everything or single apps for an hour, 8 hours or until tomorrow. No banners while you are using the phone."
+    },
+    {
+      "title": "Screen mirroring",
+      "text": "See the phone's screen in its own window over Wi-Fi or cable. Click to tap, drag to swipe, scroll, and use Back, Home, Recents, volume and lock."
     },
     {
       "title": "Calls",
@@ -40,7 +44,7 @@
     },
     {
       "title": "Files and photos",
-      "text": "Move files over USB cable, Wi-Fi or Bluetooth, and drag recent photos to Finder."
+      "text": "Move files over USB cable, Wi-Fi or Bluetooth. Over a cable, 145 MB takes seconds. Mark recent photos to download them together, drag them to Finder, or drop files to send them to the phone."
     },
     {
       "title": "Clipboard and links",
