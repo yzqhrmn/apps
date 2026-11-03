@@ -3,32 +3,32 @@
   "order": 3,
   "tagline": "Your Android phone, linked to your Mac.",
   "description": "Incredible connects an Android phone to a Mac over your local network. Traffic is encrypted end to end with a key shared once by QR code. There is no account, cloud service or server.",
-  "version": "1.0",
-  "updated": "2026-10-31",
+  "version": "1.1",
+  "updated": "2026-11-03",
   "platforms": [
     {
       "id": "android",
       "requires": "Android 12 or later",
       "note": "Install this on the phone.",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/incredible-v1.0/Incredible-1.0-android.apk",
-      "file": "Incredible-1.0-android.apk",
-      "size": 28362885,
-      "sha256": "f4032b09a0c28f1a5f3ecd45e25cd9cc6457d440a34867608492105e1b8e5fbb"
+      "url": "https://github.com/yzqhrmn/apps/releases/download/incredible-v1.1/Incredible-1.1-android.apk",
+      "file": "Incredible-1.1-android.apk",
+      "size": 2666314,
+      "sha256": "971c02c1fe0372732afe403756ba29f7a6bfcbce908e7470f62606f974c9fe26"
     },
     {
       "id": "mac",
       "requires": "macOS 14 or later",
       "note": "Not notarized. After the first launch is blocked, allow it in System Settings, Privacy & Security.",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/incredible-v1.0/Incredible-1.0-mac.zip",
-      "file": "Incredible-1.0-mac.zip",
-      "size": 1429580,
-      "sha256": "7bc7576e54bf17cbf97ca881dab7307211e7f4b1a0d7b351a3a5b94a67415550"
+      "url": "https://github.com/yzqhrmn/apps/releases/download/incredible-v1.1/Incredible-1.1-mac.zip",
+      "file": "Incredible-1.1-mac.zip",
+      "size": 1492013,
+      "sha256": "163cdb403278e1cc5d1483f845a8127ea62530a63ee3e818cbf29ed0f355710c"
     }
   ],
   "features": [
     {
       "title": "Notifications",
-      "text": "Banners on the Mac, with dismiss synced both ways, action buttons and inline reply."
+      "text": "Banners on the Mac, with dismiss synced both ways, action buttons, inline reply, a searchable history and apps you can exclude."
     },
     {
       "title": "Calls",
@@ -44,7 +44,7 @@
     },
     {
       "title": "Clipboard and links",
-      "text": "Mac clipboard reaches the phone automatically, and links open on either side."
+      "text": "Mac clipboard reaches the phone automatically. Copy on the phone and tap the notification to send it to the Mac. Links open on either side."
     },
     {
       "title": "Media",
