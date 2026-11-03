@@ -5,7 +5,7 @@
   "tagline": "Move files between your Mac and Android phone.",
   "description": "Send To Android runs on the Mac and Send to Mac runs on the phone. Drop files on one side and they arrive on the other, over Wi-Fi or a USB cable.",
   "version": "3.0",
-  "updated": "2026-10-31",
+  "updated": "2026-11-03",
   "platforms": [
     {
       "id": "mac",
@@ -13,23 +13,27 @@
       "note": "Send To Android. Not notarized, so allow the first launch in System Settings, Privacy & Security.",
       "url": "https://github.com/yzqhrmn/apps/releases/download/send-v3.0/SendToMacAndroid-3.0-mac.zip",
       "file": "SendToMacAndroid-3.0-mac.zip",
-      "size": 15537066,
-      "sha256": "eaa8ba38e4f34abc7c68064b238e6746e4f9c3bfb0302bb0971d3db411dc2fd4"
+      "size": 15540547,
+      "sha256": "be88968b86865a74363bda4a2f020d357f150d7e3645db7dd41e2a0a58c7daa9"
     },
     {
       "id": "android",
       "requires": "Android 10 or later",
-      "note": "Send to Mac, version 1.2.",
+      "note": "Send to Mac, version 3.0.",
       "url": "https://github.com/yzqhrmn/apps/releases/download/send-v3.0/SendToMacAndroid-3.0-android.apk",
       "file": "SendToMacAndroid-3.0-android.apk",
-      "size": 2611652,
-      "sha256": "d3577f8796cc8e442e65ed64156ab8017c5506a1648ccec35e8e40f41d9f4374"
+      "size": 2628036,
+      "sha256": "4b004386d5370cd782d63564a34d132ffd3555cbbf679a9b838364460d84f2db"
     }
   ],
   "features": [
     {
       "title": "Wi-Fi or USB",
       "text": "Use the same network, or plug in a cable."
+    },
+    {
+      "title": "Several phones",
+      "text": "Each phone gets its own tile. Drop files on a tile to send to that phone, and phones can send to each other."
     },
     {
       "title": "Pair with a QR code",
