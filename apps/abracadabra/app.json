@@ -1,0 +1,65 @@
+{
+  "name": "Abracadabra",
+  "order": 7,
+  "tagline": "Wave your phone, make things happen.",
+  "description": "Abracadabra turns movements of your phone into actions. Do a movement five times so the app learns it, choose what it should do, and save. From then on it listens in the background, even with the screen off, and casts the action whenever you repeat the move.",
+  "version": "1.0",
+  "updated": "2026-11-05",
+  "platforms": [
+    {
+      "id": "android",
+      "requires": "Android 9 or later, with a gyroscope",
+      "url": "https://github.com/yzqhrmn/apps/releases/download/abracadabra-v1.0/Abracadabra-1.0-android.apk",
+      "file": "Abracadabra-1.0-android.apk",
+      "size": 67208,
+      "sha256": "adc8f1b54ecd7aff307f3d015b3a5ac2f48cccf65ad98b2b3c77c589b076c76e"
+    }
+  ],
+  "features": [
+    {
+      "title": "Teach any move",
+      "text": "A twist, a chop, a flick. Do it five times and Abracadabra learns your version of it."
+    },
+    {
+      "title": "Flashlight and more",
+      "text": "Toggle the flashlight, play or pause music, change volume, switch the ringer to vibrate, open the camera or the assistant."
+    },
+    {
+      "title": "Open anything",
+      "text": "Open any app, an app shortcut such as a WhatsApp chat or a Maps route, or a specific screen inside an app."
+    },
+    {
+      "title": "System buttons",
+      "text": "Home, Back, Recent apps, Notifications, Quick settings, Lock screen, Screenshot and the Power menu."
+    },
+    {
+      "title": "Screen off",
+      "text": "Keeps listening with the screen off, and starts again after a restart."
+    },
+    {
+      "title": "Featherweight",
+      "text": "About 70 KB, no libraries, and only a couple of megabytes of memory while it listens."
+    }
+  ],
+  "setup": [
+    "Download and open the Abracadabra file on your phone.",
+    "On first start, tap Allow for each permission: notifications, running in the background, and system actions.",
+    "Tap Add gesture and do your movement five times, starting each time the circle lights up.",
+    "Choose what the movement should do, then tap Save gesture."
+  ],
+  "limits": [
+    "System actions use Android's Accessibility setting. It only presses buttons for your gestures and doesn't read your screen.",
+    "Hold the phone the way you held it while recording. Doing the move with the other hand twists the opposite way, so record that too if you need it.",
+    "Listening in the background uses a little extra battery.",
+    "Some app shortcuts only work from the home screen and can't be used.",
+    "This is a test build, so Android will warn that it comes from an unknown source."
+  ],
+  "file_label": "Abracadabra",
+  "theme": "magic",
+  "neon": "#ffd36b",
+  "font": "Cinzel Decorative",
+  "body_font": "EB Garamond",
+  "name_size": "24px",
+  "name_size_phone": "26px",
+  "title_size": "clamp(34px,7vw,64px)"
+}

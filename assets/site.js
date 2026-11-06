@@ -48,3 +48,24 @@ thumbs.forEach((thumb) => {
     thumb.setAttribute("aria-current", "true");
   });
 });
+
+// Magic theme: sparkles trail the pointer.
+if (document.body.classList.contains("theme-magic") && !matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  const colors = ["#ffd36b", "#fff3c4", "#c9a6ff", "#ffffff"];
+  let last = 0;
+  document.addEventListener("pointermove", (event) => {
+    const now = performance.now();
+    if (now - last < 45) return;
+    last = now;
+    const star = document.createElement("span");
+    star.className = "sparkle";
+    star.textContent = Math.random() < .7 ? "✦" : "✧";
+    star.style.left = `${event.clientX}px`;
+    star.style.top = `${event.clientY}px`;
+    star.style.setProperty("--size", `${8 + Math.random() * 12}px`);
+    star.style.setProperty("--dx", `${(Math.random() - .5) * 40}px`);
+    star.style.setProperty("--color", colors[Math.floor(Math.random() * colors.length)]);
+    star.addEventListener("animationend", () => star.remove());
+    document.body.append(star);
+  }, { passive: true });
+}

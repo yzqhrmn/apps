@@ -58,12 +58,13 @@ def versioned(name):
 
 
 def font_url():
-    families = ["Tilt Neon", "Share Tech Mono"] + sorted(a["font"] for a in load_apps())
+    apps = load_apps()
+    families = ["Tilt Neon", "Share Tech Mono"] + sorted({a["font"] for a in apps} | {a["body_font"] for a in apps if a.get("body_font")})
     query = "&".join("family=" + family.replace(" ", "+") for family in families)
     return f"https://fonts.googleapis.com/css2?{query}&display=swap"
 
 
-def page(title, description, body, base="", image=None, url=SITE_URL):
+def page(title, description, body, base="", image=None, url=SITE_URL, theme=None):
     og_image = f'<meta property="og:image" content="{esc(image)}">' if image else ""
     return f"""<!doctype html>
 <html lang="en">
@@ -84,7 +85,7 @@ def page(title, description, body, base="", image=None, url=SITE_URL):
 <link rel="stylesheet" href="{base}{versioned('style.css')}">
 <script src="{base}{versioned('site.js')}" defer></script>
 </head>
-<body>
+<body{f' class="theme-{esc(theme)}"' if theme else ''}>
 {'<header class="top"><a class="brand" href="' + base + '">' + esc(SITE_NAME) + '</a></header>' if base else ''}
 {body}
 <footer class="foot">
@@ -117,7 +118,7 @@ def lane(app, number):
         f"--name-size-phone:{esc(app.get('name_size_phone', app['name_size']))};--speed:{96 + number * 12}s"
     )
     return f"""
-    <li class="lane" style="{style}">
+    <li class="lane"{f' data-theme="{esc(app["theme"])}"' if app.get("theme") else ''} style="{style}">
       <a href="{esc(app['slug'])}/" aria-label="Open {esc(app['name'])}: {esc(app['tagline'])}">
         <h2 class="lane-name">{esc(app['name'])}</h2>
         <div class="reel{' down' if number % 2 else ''}"><div class="track">{images}</div></div>
@@ -184,7 +185,8 @@ def app_page(app):
         for p in app["platforms"] if p.get("sha256")
     )
     checksums = f"<details class='sums'><summary>File checksums (SHA-256)</summary><dl>{hashes}</dl></details>" if hashes else ""
-    body = f"""<main class="detail" style="--accent:{esc(app['neon'])};--app-font:'{esc(app['font'])}';--title-size:{esc(app['title_size'])}">
+    body_font = f";--body-font:'{esc(app['body_font'])}'" if app.get("body_font") else ""
+    body = f"""<main class="detail" style="--accent:{esc(app['neon'])};--app-font:'{esc(app['font'])}';--title-size:{esc(app['title_size'])}{body_font}">
   <a class="back" href="../">← All apps</a>
   <section class="hero">
     <img src="{esc(app['icon'])}" alt="" width="144" height="144">
@@ -203,7 +205,7 @@ def app_page(app):
 </main>"""
     url = f"{SITE_URL}{app['slug']}/"
     image = f"{url}{app['icon']}" if not app["icon"].endswith(".svg") else None
-    return page(f"{app['name']} · {SITE_NAME}", app["tagline"], body, base="../", image=image, url=url)
+    return page(f"{app['name']} · {SITE_NAME}", app["tagline"], body, base="../", image=image, url=url, theme=app.get("theme"))
 
 
 def build(_args=None):

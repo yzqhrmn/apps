@@ -268,3 +268,104 @@ a.dl.mine span, a.dl.mine small { color: inherit; opacity: .85; }
   .bad, .bad.z, .track { animation: none; }
   .reel { overflow: auto; }
 }
+
+/* Magic theme: a night sky with gold lettering. Used by apps whose app.json has "theme": "magic". */
+.theme-magic {
+  --bg: #0b0820;
+  --surface: rgb(32 22 74 / .62);
+  --line: #3d2f78;
+  --ink: #f6efff;
+  --muted: #c3b8e8;
+  --gold: #ffd36b;
+  --violet: #b48cff;
+  --on-accent: #1a1033;
+  --stars:
+    radial-gradient(1px 1px at 23px 41px, #fff 50%, transparent 51%) 0 0 / 173px 157px,
+    radial-gradient(1.5px 1.5px at 97px 118px, #ffe9b0 50%, transparent 51%) 0 0 / 211px 199px,
+    radial-gradient(1px 1px at 151px 63px, #dccbff 50%, transparent 51%) 0 0 / 251px 233px,
+    radial-gradient(1px 1px at 61px 177px, #fff 50%, transparent 51%) 0 0 / 293px 271px;
+  background:
+    var(--stars),
+    radial-gradient(70% 45% at 12% 0, rgb(180 140 255 / .30), transparent 70%),
+    radial-gradient(55% 40% at 92% 6%, rgb(255 211 107 / .16), transparent 70%),
+    radial-gradient(90% 60% at 50% 115%, rgb(110 64 220 / .38), transparent 70%),
+    linear-gradient(#0b0820, #160d3b 55%, #0b0820);
+  background-attachment: fixed;
+}
+html:has(.theme-magic) { background: #0b0820; }
+
+/* Twinkling stars instead of scanlines. */
+.theme-magic::after {
+  background:
+    radial-gradient(1.5px 1.5px at 40px 90px, #fff 50%, transparent 51%) 0 0 / 331px 307px,
+    radial-gradient(2px 2px at 180px 30px, #ffe9b0 50%, transparent 51%) 0 0 / 389px 353px,
+    radial-gradient(1.5px 1.5px at 260px 220px, #dccbff 50%, transparent 51%) 0 0 / 433px 401px;
+  animation: twinkle 3.2s ease-in-out infinite alternate;
+}
+@keyframes twinkle { from { opacity: .15; } to { opacity: .9; } }
+
+.theme-magic .detail { font-family: var(--body-font), Georgia, serif; font-size: 20px; }
+.theme-magic .back, .theme-magic .meta, .theme-magic .sums { font-family: var(--mono); }
+
+.theme-magic .hero img { border-radius: 26%; box-shadow: 0 0 0 1px rgb(255 211 107 / .5), 0 0 36px rgb(180 140 255 / .55), 0 0 80px rgb(255 211 107 / .2); }
+.theme-magic .hero h1,
+.lane[data-theme="magic"] .lane-name {
+  background: linear-gradient(100deg, #ffd36b 0%, #fff6d6 22%, #ffc23d 40%, #c9a6ff 62%, #ffd36b 80%, #fff6d6 100%) 0 0 / 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
+  filter: drop-shadow(0 0 10px rgb(255 211 107 / .45));
+  animation: shimmer 7s linear infinite;
+}
+@keyframes shimmer { to { background-position: -250% 0; } }
+.theme-magic .line { font-style: italic; font-size: 24px; }
+
+.theme-magic .detail h2 { font-family: var(--app-font), serif; font-size: 28px; color: var(--gold); text-shadow: 0 0 14px rgb(255 211 107 / .4); }
+.theme-magic .detail h2::before { content: "✦ "; color: var(--violet); }
+
+.theme-magic .dl { border-color: rgb(255 211 107 / .35); background: linear-gradient(135deg, rgb(60 38 130 / .7), rgb(25 16 60 / .7)); backdrop-filter: blur(6px); font-family: var(--mono); }
+.theme-magic a.dl:hover { border-color: var(--gold); box-shadow: 0 0 22px rgb(255 211 107 / .35); }
+.theme-magic a.dl.mine { background: linear-gradient(120deg, #ffe08a, #ffc23d 55%, #e0a8ff); border-color: transparent; box-shadow: 0 0 26px rgb(255 211 107 / .5), 0 0 60px rgb(180 140 255 / .3); }
+
+.theme-magic .stage, .theme-magic .thumbs a { border-color: rgb(180 140 255 / .35); background: rgb(24 15 58 / .6); }
+.theme-magic .thumbs a[aria-current] { border-color: var(--gold); box-shadow: 0 0 0 1px var(--gold), 0 0 14px rgb(255 211 107 / .6); }
+
+.theme-magic .features li { padding: 18px 20px; border: 1px solid rgb(180 140 255 / .28); border-radius: 14px; background: rgb(30 20 70 / .45); }
+.theme-magic .features h3 { font-family: var(--app-font), serif; font-size: 18px; color: var(--gold); }
+.theme-magic .features p { font-size: 18px; }
+.theme-magic .steps li::marker { color: var(--gold); font-family: var(--app-font), serif; }
+.theme-magic .about { font-size: 22px; }
+
+/* Its lane on the home page: a small piece of night sky. */
+.lane[data-theme="magic"] > a {
+  background:
+    radial-gradient(1px 1px at 23px 41px, #fff 50%, transparent 51%) 0 0 / 97px 89px,
+    radial-gradient(1.5px 1.5px at 70px 20px, #ffe9b0 50%, transparent 51%) 0 0 / 131px 117px,
+    radial-gradient(90% 60% at 50% 0, rgb(180 140 255 / .35), transparent 70%),
+    linear-gradient(#1a0f45, #0d0828);
+  border-color: rgb(255 211 107 / .4);
+}
+.lane[data-theme="magic"] .lane-name { font-family: var(--app-font), serif; border-bottom-color: rgb(255 211 107 / .35); }
+
+/* Sparkles that follow the pointer (added by site.js). */
+.sparkle {
+  position: fixed;
+  z-index: 11;
+  pointer-events: none;
+  font-size: var(--size, 14px);
+  line-height: 1;
+  color: var(--color, #ffd36b);
+  text-shadow: 0 0 8px currentColor;
+  transform: translate(-50%, -50%);
+  animation: sparkle .9s ease-out forwards;
+}
+@keyframes sparkle {
+  from { opacity: 1; transform: translate(-50%, -50%) scale(1) rotate(0); }
+  to { opacity: 0; transform: translate(calc(-50% + var(--dx, 0px)), calc(-50% + 26px)) scale(.3) rotate(120deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .theme-magic::after, .theme-magic .hero h1, .lane[data-theme="magic"] .lane-name { animation: none; }
+  .theme-magic::after { opacity: .5; }
+}
