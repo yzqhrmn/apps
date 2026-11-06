@@ -3,22 +3,30 @@
   "order": 1,
   "tagline": "A private, offline vault for the people in your life.",
   "description": "Memories keeps a profile for each person you care about, with their photos, videos, favorites, socials and your story together. Everything is encrypted on your phone. There is no account and no cloud.",
-  "version": "1.16.1",
-  "updated": "2026-10-31",
+  "version": "1.17.2",
+  "updated": "2026-11-05",
   "platforms": [
     {
       "id": "android",
       "requires": "Android 9 or later",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/memories-v1.16.1/Memories-1.16.1-android.apk",
-      "file": "Memories-1.16.1-android.apk",
-      "size": 38990369,
-      "sha256": "706ba8891b001ad9532a621d4624d4cd4126670bc1226a91bd5e9987cf43ed59"
+      "url": "https://github.com/yzqhrmn/apps/releases/download/memories-v1.17.2/Memories-1.17.2-android.apk",
+      "file": "Memories-1.17.2-android.apk",
+      "size": 39259625,
+      "sha256": "133bc68c9eac8dcbdcf693cb0798638d711f542e01dace38e1d1ac040e004733"
     }
   ],
   "features": [
     {
       "title": "Profiles",
-      "text": "Name, birthday, city, contact details, when you met and notes, with tabs for Info, Favorites, Socials and Story."
+      "text": "Name, birthday, address, contact details, when you met and notes, plus extra details like college, work and languages, with tabs for Info, Favorites, Socials and Story."
+    },
+    {
+      "title": "Search everything",
+      "text": "Find anyone by any detail, #tag, favorite, caption or story line, and jump straight to where it matched."
+    },
+    {
+      "title": "Addresses on the map",
+      "text": "Tap an address to open it in your maps app and see how far it is."
     },
     {
       "title": "Encrypted photos and videos",
