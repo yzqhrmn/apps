@@ -224,6 +224,28 @@ a.dl.mine span, a.dl.mine small { color: inherit; opacity: .85; }
 .sums dd { margin: 0; overflow-wrap: anywhere; }
 .sums code { font-size: 12.5px; }
 
+.pager { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 48px; }
+.pager a {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 16px 18px;
+  border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+  border-radius: 10px;
+  background: var(--surface);
+  text-decoration: none;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.pager .pager-next { align-items: flex-end; text-align: right; }
+.pager span { color: var(--muted); font: 14px var(--mono); }
+.pager strong {
+  font: 400 20px/1.2 var(--app-font), var(--mono);
+  overflow-wrap: break-word;
+  color: var(--accent);
+  text-shadow: 0 0 10px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+.pager a:hover { border-color: var(--accent); box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 40%, transparent); }
+
 .intro { padding: 72px 20px 40px; text-align: center; }
 .intro h1 { font-size: clamp(38px, 8vw, 68px); color: var(--cyan); }
 
@@ -260,6 +282,7 @@ a.dl.mine span, a.dl.mine small { color: inherit; opacity: .85; }
   .hero { align-items: flex-start; flex-direction: column; gap: 16px; padding-top: 8px; }
   .hero img { width: 96px; height: 96px; }
   .gallery { grid-template-columns: minmax(0, 1fr); }
+  .pager { grid-template-columns: minmax(0, 1fr); }
   .stage { height: 300px; padding: 10px; }
   .thumbs { grid-template-columns: repeat(auto-fill, minmax(62px, 1fr)); grid-auto-rows: 62px; max-height: none; }
 }
@@ -336,6 +359,9 @@ html:has(.theme-magic) { background: #0b0820; }
 .theme-magic .features p { font-size: 18px; }
 .theme-magic .steps li::marker { color: var(--gold); font-family: var(--app-font), serif; }
 .theme-magic .about { font-size: 22px; }
+.theme-magic .pager a { border-color: rgb(255 211 107 / .35); background: linear-gradient(135deg, rgb(60 38 130 / .7), rgb(25 16 60 / .7)); backdrop-filter: blur(6px); }
+.theme-magic .pager a:hover { border-color: var(--gold); box-shadow: 0 0 22px rgb(255 211 107 / .35); }
+.theme-magic .pager strong { color: var(--gold); text-shadow: 0 0 14px rgb(255 211 107 / .4); }
 
 /* Its lane on the home page: a small piece of night sky. */
 .lane[data-theme="magic"] > a {

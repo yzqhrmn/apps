@@ -171,7 +171,15 @@ def gallery(app):
   </section>"""
 
 
-def app_page(app):
+def pager(previous, following):
+    links = "".join(
+        f'<a class="pager-{kind}" href="../{esc(other["slug"])}/" rel="{kind}"><span>{label}</span><strong>{esc(other["name"])}</strong></a>'
+        for kind, label, other in (("prev", "← Previous app", previous), ("next", "Next app →", following))
+    )
+    return f'<nav class="pager" aria-label="More apps">{links}</nav>'
+
+
+def app_page(app, previous, following):
     features = "".join(
         f'<li><h3>{esc(f["title"])}</h3><p>{esc(f["text"])}</p></li>' for f in app["features"]
     )
@@ -202,6 +210,7 @@ def app_page(app):
   <section><h2>What it does</h2><ul class="features">{features}</ul></section>
   {''.join(sections)}
   {checksums}
+  {pager(previous, following)}
 </main>"""
     url = f"{SITE_URL}{app['slug']}/"
     image = f"{url}{app['icon']}" if not app["icon"].endswith(".svg") else None
@@ -214,13 +223,13 @@ def build(_args=None):
         shutil.rmtree(OUT)
     shutil.copytree(ROOT / "assets", OUT / "assets")
     (OUT / "index.html").write_text(home(apps))
-    for app in apps:
+    for number, app in enumerate(apps):
         folder = OUT / app["slug"]
         folder.mkdir()
         shutil.copy(APPS / app["slug"] / app["icon"], folder)
         if (APPS / app["slug"] / "shots").is_dir():
             shutil.copytree(APPS / app["slug"] / "shots", folder / "shots")
-        (folder / "index.html").write_text(app_page(app))
+        (folder / "index.html").write_text(app_page(app, apps[number - 1], apps[(number + 1) % len(apps)]))
     missing = page(
         f"Page not found · {SITE_NAME}", "This page does not exist.",
         f'<main class="intro"><h1>Nothing here.</h1><p><a href="{SITE_URL}">Back to all apps</a></p></main>',
