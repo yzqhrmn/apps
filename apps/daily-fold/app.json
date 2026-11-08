@@ -8,7 +8,11 @@
   "platforms": [
     {
       "id": "android",
-      "requires": "Android 10 or later. Made for foldables, works on any phone"
+      "requires": "Android 10 or later. Made for foldables, works on any phone",
+      "url": "https://github.com/yzqhrmn/apps/releases/download/daily-fold-v1.0/DailyFold-1.0-android.apk",
+      "file": "DailyFold-1.0-android.apk",
+      "size": 12885573,
+      "sha256": "ca945d427cfba7cdd6fb4a6ae156bd8deffe7e9eb013d722a3ecf94e4c284cc8"
     }
   ],
   "features": [
