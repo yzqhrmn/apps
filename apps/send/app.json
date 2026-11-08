@@ -1,6 +1,6 @@
 {
   "name": "Send to Mac/Android",
-  "order": 4,
+  "order": 5,
   "file_label": "SendToMacAndroid",
   "tagline": "Move files between your Mac and Android phone.",
   "description": "Send To Android runs on the Mac and Send to Mac runs on the phone. Drop files on one side and they arrive on the other, over Wi-Fi or a USB cable.",

@@ -1,6 +1,6 @@
 {
   "name": "Incredible",
-  "order": 3,
+  "order": 4,
   "tagline": "Your Android phone, linked to your Mac.",
   "description": "Incredible connects an Android phone to a Mac over your local network. Traffic is encrypted end to end with a key shared once by QR code. There is no account, cloud service or server.",
   "version": "1.2",

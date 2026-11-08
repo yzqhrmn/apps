@@ -1,0 +1,55 @@
+{
+  "name": "The Daily Fold",
+  "order": 2,
+  "tagline": "Your news, typeset as a real newspaper for foldable phones.",
+  "description": "The Daily Fold collects the news from the sources you choose and prints it like a real paper, with columns, headlines and photographs. Open your foldable and read a two-page spread; turn pages with a paper curl. The front pages tease the most interesting stories from every section, then each story follows in full, section by section, in the order you set.",
+  "version": "1.0",
+  "updated": "2026-11-07",
+  "platforms": [
+    {
+      "id": "android",
+      "requires": "Android 10 or later. Made for foldables, works on any phone"
+    }
+  ],
+  "features": [
+    {
+      "title": "A real front page",
+      "text": "Teasers of the day's most interesting stories from every section, each with the page where it continues in full."
+    },
+    {
+      "title": "Stories in full, in your order",
+      "text": "Sections follow in the order you choose, every story printed whole, page after page. No jumping between pages."
+    },
+    {
+      "title": "Turn pages like paper",
+      "text": "Swipe, tap or draw a small quarter circle with your thumb. One-handed and left-handed modes keep every gesture in reach."
+    },
+    {
+      "title": "Your sources",
+      "text": "Pick from a directory by section and language, or type any site's address and the app finds its feed."
+    },
+    {
+      "title": "AI briefing",
+      "text": "On phones with on-device AI, such as the Pixel 9 and 10, the best stories are summed up in a few pages. Nothing leaves the phone."
+    },
+    {
+      "title": "Make it yours",
+      "text": "Newspaper styles, fonts, text size, columns, night mode, a blue-light filter and black and white."
+    }
+  ],
+  "setup": [
+    "Download the file on your phone and open it.",
+    "If Android asks, allow your browser to install apps.",
+    "Choose your languages and sections, and your first paper is printed."
+  ],
+  "limits": [
+    "The AI briefing only appears on phones that have on-device AI available to apps.",
+    "Some sites only publish a short teaser, so their stories stay short.",
+    "Android will warn that the app comes from an unknown source."
+  ],
+  "file_label": "DailyFold",
+  "neon": "#f4e9cf",
+  "font": "UnifrakturMaguntia",
+  "name_size": "30px",
+  "title_size": "clamp(38px,8vw,68px)"
+}

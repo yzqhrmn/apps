@@ -1,6 +1,6 @@
 {
   "name": "Abracadabra",
-  "order": 7,
+  "order": 8,
   "tagline": "Wave your phone, make things happen.",
   "description": "Abracadabra turns movements of your phone into actions. Do a movement five times so the app learns it, choose what it should do, and save. From then on it listens in the background, even with the screen off, and casts the action whenever you repeat the move.",
   "version": "1.0",
