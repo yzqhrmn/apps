@@ -3,16 +3,16 @@
   "order": 1,
   "tagline": "A private, offline vault for the people in your life.",
   "description": "Memories keeps a profile for each person you care about, with their photos, videos, favorites, socials and your story together. Everything is encrypted on your phone. There is no account and no cloud.",
-  "version": "1.17.4",
-  "updated": "2026-11-07",
+  "version": "1.17.5",
+  "updated": "2026-11-11",
   "platforms": [
     {
       "id": "android",
       "requires": "Android 9 or later",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/memories-v1.17.4/Memories-1.17.4-android.apk",
-      "file": "Memories-1.17.4-android.apk",
-      "size": 39325169,
-      "sha256": "128a802f73a2d0198dd8d4949482749e70449b3b9cbdcaa72ab16869f95e6e7d"
+      "url": "https://github.com/yzqhrmn/apps/releases/download/memories-v1.17.5/Memories-1.17.5-android.apk",
+      "file": "Memories-1.17.5-android.apk",
+      "size": 39325165,
+      "sha256": "f4ab3ad9aed1b84989d0df56502f002ddb26d8bbb19d588b3da526c4ddcc31ba"
     }
   ],
   "features": [
