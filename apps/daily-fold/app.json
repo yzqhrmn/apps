@@ -3,16 +3,16 @@
   "order": 2,
   "tagline": "Your news, typeset as a real newspaper for foldable phones.",
   "description": "The Daily Fold collects the news from the sources you choose and prints it like a real paper, with columns, headlines and photographs. Open your foldable and read a two-page spread; turn pages with a paper curl. The front pages tease the most interesting stories from every section, then each story follows in full, section by section, in the order you set.",
-  "version": "1.1",
-  "updated": "2026-11-07",
+  "version": "1.3",
+  "updated": "2026-11-14",
   "platforms": [
     {
       "id": "android",
       "requires": "Android 10 or later. Made for foldables, works on any phone",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/daily-fold-v1.1/DailyFold-1.1-android.apk",
-      "file": "DailyFold-1.1-android.apk",
-      "size": 12901957,
-      "sha256": "9187f66886857bd06d2c96a52696c40a55818fd60f5b30f733dc91df337d5789"
+      "url": "https://github.com/yzqhrmn/apps/releases/download/daily-fold-v1.3/DailyFold-1.3-android.apk",
+      "file": "DailyFold-1.3-android.apk",
+      "size": 7450933,
+      "sha256": "5a9be2d2311f0541e90acc8e004352f7e7ba2bd403878eadbf0c01babfa414d3"
     }
   ],
   "features": [
