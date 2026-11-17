@@ -3,22 +3,22 @@
   "order": 8,
   "tagline": "Wave your phone, make things happen.",
   "description": "Abracadabra turns movements of your phone into actions. Do a movement five times so the app learns it, choose what it should do, and save. From then on it listens in the background, even with the screen off, and casts the action whenever you repeat the move.",
-  "version": "1.0",
-  "updated": "2026-11-05",
+  "version": "1.1",
+  "updated": "2026-11-17",
   "platforms": [
     {
       "id": "android",
       "requires": "Android 9 or later, with a gyroscope",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/abracadabra-v1.0/Abracadabra-1.0-android.apk",
-      "file": "Abracadabra-1.0-android.apk",
-      "size": 67208,
-      "sha256": "adc8f1b54ecd7aff307f3d015b3a5ac2f48cccf65ad98b2b3c77c589b076c76e"
+      "url": "https://github.com/yzqhrmn/apps/releases/download/abracadabra-v1.1/Abracadabra-1.1-android.apk",
+      "file": "Abracadabra-1.1-android.apk",
+      "size": 74884,
+      "sha256": "775b2da634613bff3d07df98f4fa3512ced14952d2ce62bb90e0eb4b82797a94"
     }
   ],
   "features": [
     {
       "title": "Teach any move",
-      "text": "A twist, a chop, a flick. Do it five times and Abracadabra learns your version of it."
+      "text": "A twist, a chop, a flick. Do it five times and Abracadabra learns your version of it, then keeps learning from how you really do it."
     },
     {
       "title": "Flashlight and more",
@@ -34,11 +34,15 @@
     },
     {
       "title": "Screen off",
-      "text": "Keeps listening with the screen off, and starts again after a restart."
+      "text": "Works with the screen off and starts again after a restart. It recognises a move even if you lift the phone first or keep moving afterwards."
+    },
+    {
+      "title": "Easy on the battery",
+      "text": "When the phone lies still it sleeps. Low-power motion sensors wake it the moment you pick it up or twist it."
     },
     {
       "title": "Featherweight",
-      "text": "About 70 KB, no libraries, and only a couple of megabytes of memory while it listens."
+      "text": "About 75 KB, no libraries, and only a couple of megabytes of memory while it listens."
     }
   ],
   "setup": [
@@ -50,7 +54,7 @@
   "limits": [
     "System actions use Android's Accessibility setting. It only presses buttons for your gestures and doesn't read your screen.",
     "Hold the phone the way you held it while recording. Doing the move with the other hand twists the opposite way, so record that too if you need it.",
-    "Listening in the background uses a little extra battery.",
+    "On phones without a low-power motion sensor the app has to keep the phone awake, which uses more battery.",
     "Some app shortcuts only work from the home screen and can't be used.",
     "This is a test build, so Android will warn that it comes from an unknown source."
   ],
