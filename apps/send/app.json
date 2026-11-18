@@ -4,26 +4,26 @@
   "file_label": "SendToMacAndroid",
   "tagline": "Move files between your Mac and Android phone.",
   "description": "Send To Android runs on the Mac and Send to Mac runs on the phone. Drop files on one side and they arrive on the other, over Wi-Fi or a USB cable.",
-  "version": "3.1",
-  "updated": "2026-11-03",
+  "version": "3.2",
+  "updated": "2026-11-17",
   "platforms": [
     {
       "id": "mac",
       "requires": "Apple silicon, macOS 11 or later",
       "note": "Send To Android. Not notarized, so allow the first launch in System Settings, Privacy & Security.",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/send-v3.1/SendToMacAndroid-3.1-mac.zip",
-      "file": "SendToMacAndroid-3.1-mac.zip",
-      "size": 15541905,
-      "sha256": "1fddac7720cbbdebe0e6a120505854179996f756304f8fdd26474faf99289bf6"
+      "url": "https://github.com/yzqhrmn/apps/releases/download/send-v3.2/SendToMacAndroid-3.2-mac.zip",
+      "file": "SendToMacAndroid-3.2-mac.zip",
+      "size": 15554579,
+      "sha256": "60727ae966ab015f8316f2b6499ef9dddac1be5bc8e0f57afdfa174dc8e18c24"
     },
     {
       "id": "android",
       "requires": "Android 10 or later",
-      "note": "Send to Mac, version 3.1.",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/send-v3.1/SendToMacAndroid-3.1-android.apk",
-      "file": "SendToMacAndroid-3.1-android.apk",
+      "note": "Send to Mac, version 3.2.",
+      "url": "https://github.com/yzqhrmn/apps/releases/download/send-v3.2/SendToMacAndroid-3.2-android.apk",
+      "file": "SendToMacAndroid-3.2-android.apk",
       "size": 2628036,
-      "sha256": "9ec32d41131f6d32741746d7674537de12422dff38f7ce231bf53d0ac155e367"
+      "sha256": "4d29edf16d4258ee4d11b75ae4dce41470dd50cb325956a3495efa15c0155a42"
     }
   ],
   "features": [
@@ -50,6 +50,10 @@
     {
       "title": "Drag and drop",
       "text": "Drop files on the Mac window, or use Send to Mac from Android's share sheet."
+    },
+    {
+      "title": "Easy on the battery",
+      "text": "Both apps can quit after 10, 20 or 30 minutes without use. Opening Send to Mac on the phone starts the Mac app again in the background."
     }
   ],
   "setup": [
