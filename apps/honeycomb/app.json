@@ -4,16 +4,16 @@
   "file_label": "HoneycombLauncher",
   "tagline": "A home screen of bubbles you can fling, pinch and play with.",
   "description": "Honeycomb Launcher replaces your home screen with a honeycomb of round app icons, like a smartwatch. Pan in any direction and the grid never ends, pinch out to see every app at once, and tap a bubble to open it. Favorites slide out from the edge of the screen, and a dock and search are a thumb away. It works on regular phones and on foldables, with a separate setup for each screen.",
-  "version": "1.0",
+  "version": "1.0.1",
   "updated": "2026-11-21",
   "platforms": [
     {
       "id": "android",
       "requires": "Android 10 or later",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/honeycomb-v1.0/HoneycombLauncher-1.0-android.apk",
-      "file": "HoneycombLauncher-1.0-android.apk",
+      "url": "https://github.com/yzqhrmn/apps/releases/download/honeycomb-v1.0.1/HoneycombLauncher-1.0.1-android.apk",
+      "file": "HoneycombLauncher-1.0.1-android.apk",
       "size": 3308725,
-      "sha256": "63242e4cfb307b60754f0c6e189ec06134485908376a869e0d703ff93aeef1b2"
+      "sha256": "029a04e97ea51b493de4897c694b21c1f1f7803910c704769c5394bd809842d0"
     }
   ],
   "features": [
