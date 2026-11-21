@@ -1,0 +1,69 @@
+{
+  "name": "Honeycomb Launcher",
+  "order": 7,
+  "file_label": "HoneycombLauncher",
+  "tagline": "A home screen of bubbles you can fling, pinch and play with.",
+  "description": "Honeycomb Launcher replaces your home screen with a honeycomb of round app icons, like a smartwatch. Pan in any direction and the grid never ends, pinch out to see every app at once, and tap a bubble to open it. Favorites slide out from the edge of the screen, and a dock and search are a thumb away. It works on regular phones and on foldables, with a separate setup for each screen.",
+  "version": "1.0",
+  "updated": "2026-11-21",
+  "platforms": [
+    {
+      "id": "android",
+      "requires": "Android 10 or later"
+    }
+  ],
+  "features": [
+    {
+      "title": "Endless honeycomb",
+      "text": "Scroll any way and the grid keeps going. Scroll sideways and the apps flow down the screen one band at a time, so every app passes the middle in one loop."
+    },
+    {
+      "title": "Real physics",
+      "text": "Fling the grid, pinch out to a map of every app, or turn on gravity and tilt the phone to pour the bubbles into a pile."
+    },
+    {
+      "title": "Favorites drawer",
+      "text": "Swipe in from the side or tap the badge, and your favorite apps fan out under your thumb, with quick buttons for the flashlight, screenshots, Wi-Fi and more."
+    },
+    {
+      "title": "Dock, folders and search",
+      "text": "Drag an app onto the dock, hold one bubble over another to make a folder, and type to find any app above the keyboard."
+    },
+    {
+      "title": "Your look",
+      "text": "Icon packs, themed monochrome icons, custom icons per app, labels on or off, and sort by name, color, category, most used or install date."
+    },
+    {
+      "title": "Idle drift",
+      "text": "Leave the phone alone and the honeycomb glides slowly across a field of stars."
+    },
+    {
+      "title": "Games",
+      "text": "Brick breaker, air hockey and bowling, all played with your own app icons. Air hockey has ten levels and a two-player mode."
+    },
+    {
+      "title": "Made for foldables",
+      "text": "The cover screen and the inner screen each keep their own layout, and in tabletop mode the controls move below the hinge."
+    },
+    {
+      "title": "Light on battery",
+      "text": "Nothing runs while the home screen is hidden, and a still screen draws nothing at all."
+    }
+  ],
+  "setup": [
+    "Download the file on your phone and open it.",
+    "If Android asks, allow your browser to install apps.",
+    "Press the Home button and choose Honeycomb, then tap Always.",
+    "Long-press an empty spot for Settings, games and sorting."
+  ],
+  "limits": [
+    "Lock screen, screenshot, recent apps and the power menu buttons need Honeycomb turned on once under Accessibility. It only presses those buttons and doesn't read your screen.",
+    "Recent apps in the dock need Usage access.",
+    "Samsung phones play their own animation when an app opens from a third-party home screen.",
+    "This is a test build, so Android will warn that it comes from an unknown source."
+  ],
+  "neon": "#ffb300",
+  "font": "Bungee Inline",
+  "name_size": "24px",
+  "title_size": "clamp(30px,6.5vw,56px)"
+}
