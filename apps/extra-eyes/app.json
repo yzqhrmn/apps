@@ -4,26 +4,26 @@
   "file_label": "ExtraEyes",
   "tagline": "Turn a spare phone into a camera that rings another phone.",
   "description": "Point one Android phone at a door or room and mark the area you care about. When someone comes in, your other phone rings. Video stays on your own Wi-Fi, encrypted, with no account, cloud or server.",
-  "version": "1.1",
-  "updated": "2026-10-31",
+  "version": "1.2",
+  "updated": "2026-11-21",
   "platforms": [
     {
       "id": "android",
       "requires": "Android 8 or later",
       "note": "Install this on the camera phone and the watcher phone. Photo and Video need Android 10 or later.",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/extra-eyes-v1.1/ExtraEyes-1.1-android.apk",
-      "file": "ExtraEyes-1.1-android.apk",
-      "size": 54828417,
-      "sha256": "40388c339b8ebbdbda9731e41499da093ac6a341e24d5d52404f35a8619fa706"
+      "url": "https://github.com/yzqhrmn/apps/releases/download/extra-eyes-v1.2/ExtraEyes-1.2-android.apk",
+      "file": "ExtraEyes-1.2-android.apk",
+      "size": 48084189,
+      "sha256": "e78f0a60c9ff517d8abea7857ea5fac6dc96fcaaa6db9afff9a31b1428e53dfa"
     },
     {
       "id": "wear",
       "requires": "Wear OS 3 or later",
       "note": "Optional. Installing on a watch needs Wireless debugging and adb on a computer.",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/extra-eyes-v1.1/ExtraEyes-1.1-wear.apk",
-      "file": "ExtraEyes-1.1-wear.apk",
-      "size": 57600090,
-      "sha256": "5a3770b2eaafa61998be452d6c51c5e174db00b541a86b3ae44ffa0d6dd1945c"
+      "url": "https://github.com/yzqhrmn/apps/releases/download/extra-eyes-v1.2/ExtraEyes-1.2-wear.apk",
+      "file": "ExtraEyes-1.2-wear.apk",
+      "size": 43458203,
+      "sha256": "2fbb80fe177292af22bfa2b21fa06a94c64344ac96210e49589e441f82a09b28"
     }
   ],
   "features": [
