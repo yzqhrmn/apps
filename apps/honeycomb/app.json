@@ -9,7 +9,11 @@
   "platforms": [
     {
       "id": "android",
-      "requires": "Android 10 or later"
+      "requires": "Android 10 or later",
+      "url": "https://github.com/yzqhrmn/apps/releases/download/honeycomb-v1.0/HoneycombLauncher-1.0-android.apk",
+      "file": "HoneycombLauncher-1.0-android.apk",
+      "size": 3308725,
+      "sha256": "63242e4cfb307b60754f0c6e189ec06134485908376a869e0d703ff93aeef1b2"
     }
   ],
   "features": [
