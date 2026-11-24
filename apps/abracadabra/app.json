@@ -3,16 +3,16 @@
   "order": 8,
   "tagline": "Wave your phone, make things happen.",
   "description": "Abracadabra turns movements of your phone into actions. Do a movement five times so the app learns it, choose what it should do, and save. From then on it listens in the background, even with the screen off, and casts the action whenever you repeat the move.",
-  "version": "1.2",
-  "updated": "2026-11-20",
+  "version": "1.3",
+  "updated": "2026-11-23",
   "platforms": [
     {
       "id": "android",
       "requires": "Android 9 or later, with a gyroscope",
-      "url": "https://github.com/yzqhrmn/apps/releases/download/abracadabra-v1.2/Abracadabra-1.2-android.apk",
-      "file": "Abracadabra-1.2-android.apk",
-      "size": 75356,
-      "sha256": "cf45a38f61d644ed0190e2f303493bcb7030ef2d966ffb3d547700d93d0eb9c7"
+      "url": "https://github.com/yzqhrmn/apps/releases/download/abracadabra-v1.3/Abracadabra-1.3-android.apk",
+      "file": "Abracadabra-1.3-android.apk",
+      "size": 76464,
+      "sha256": "1001e80b277374047f211f51d3a9b51789ba1821f90c50902060a839ad5657ed"
     }
   ],
   "features": [
